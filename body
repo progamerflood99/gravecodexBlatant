@@ -1,6 +1,6 @@
 -- CREDITS TO Flood and Grave
 -- // Services
-local accomidationfactor = 0.085
+local accomidationfactor = 0.100
 local Players = game:GetService("Players")
 
 -- // Vars
@@ -24,6 +24,26 @@ SilentAim.checkSilentAim = function()
 
     return (checkA and daHood)
 end
+wait(1)
+local function callback(text)
+    if text == "Yes" then
+	print("User said yes")
+    elseif text == "No" then
+	print("User said no")
+    end
+end
+
+local bindableFunction= Instance.new("BindableFunction")
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "GraveCodex";
+    Text = "Unreleased So If Its Ass Stfu";
+    Icon = "RBXID OR BLANK";
+    Duration = "4";
+    callbakc = bindableFunction;
+    Button1 = "ok";
+    Button2 = "ok";
+})
 
 -- // Hook
 mt.__index = newcclosure(function(t, k)
